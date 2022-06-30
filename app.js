@@ -1,14 +1,51 @@
 "use strict";
-let button = document.getElementById('button');
-let input1 = document.getElementById('input1');
-let input2 = document.getElementById('input2');
-function adicionarNumeros(num1, num2) {
-    return num1 + num2;
+const pessoa = {
+    nome: 'mariana',
+    idade: 28,
+    profissao: 'desenvolvedora'
+};
+pessoa.idade = 25;
+const andre = {
+    nome: 'andre',
+    idade: 25,
+    profissao: 'pintor'
+};
+const paula = {
+    nome: 'paula',
+    idade: 25,
+    profissao: 'desenvolvedora'
+};
+var Profissao;
+(function (Profissao) {
+    Profissao[Profissao["Professora"] = 0] = "Professora";
+    Profissao[Profissao["Atriz"] = 1] = "Atriz";
+    Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
+    Profissao[Profissao["JofadoraDeFutebol"] = 3] = "JofadoraDeFutebol";
+})(Profissao || (Profissao = {}));
+const vanessa = {
+    nome: 'Vanessa',
+    idade: 23,
+    profissao: Profissao.Desenvolvedora
+};
+const marua = {
+    nome: 'Vanessa',
+    idade: 23,
+    profissao: Profissao.Desenvolvedora
+};
+const jessica = {
+    nome: 'jessica',
+    idade: 28,
+    profissao: Profissao.Desenvolvedora,
+    materias: ['programação', 'Calculo']
+};
+const monica = {
+    nome: 'jessica',
+    idade: 28,
+    materias: ['programação', 'Calculo']
+};
+function listar(lista) {
+    for (const item of lista) {
+        console.log('-', item);
+    }
 }
-if (button) {
-    button === null || button === void 0 ? void 0 : button.addEventListener('click', () => {
-        if (input1 && input2) {
-            console.log(adicionarNumeros(Number(input1.value), Number(input2.value)));
-        }
-    });
-}
+listar(monica.materias);
