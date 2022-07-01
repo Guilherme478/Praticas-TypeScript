@@ -1,4 +1,4 @@
-/*let button = document.getElementById('button');
+let button = document.getElementById('button');
 
 let input1 = document.getElementById('input1');
 
@@ -14,4 +14,4 @@ function somarNumeros(num1, num2) {
 
 button.addEventListener('click', () => {
     console.log(somarNumeros(input1.value, input2.value));
-})*/
+})
